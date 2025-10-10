@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap:5px;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+}
+
+.header-item{
+    width: fit-content;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'a b c d e f g'
+    'h i j k l m n'
+    'o p q r s t u'
+    'v w x y z one two'
+    'three four five six seven eight nine'
+    ;
+    grid-gap: 10px;
+    background-color: rgba(255, 174, 255, 0.8);
+    padding: 10px;
+}
