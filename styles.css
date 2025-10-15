@@ -2,13 +2,14 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0;
+    background-color: blanchedalmond;
 }
 
 #header{
     display: flex;
     flex-direction: row;
     width: 100%;
-    gap:5px;
+    gap:50px;
     justify-content: center;
     align-items: center;
     background-color: burlywood;
@@ -18,16 +19,29 @@ body{
     width: fit-content;
 }
 
+#info{
+    padding: 20px;
+    text-align: center;
+    background-color: bisque;
+}
+
+
 .grid-container{
     display: grid;
     grid-template-areas: 
-    'a b c d e f g'
-    'h i j k l m n'
-    'o p q r s t u'
-    'v w x y z one two'
-    'three four five six seven eight nine'
+    'a b c d e' 
+    'f g h i j' 
+    'k l m n o'
+    'p q r s t'
+    'u v w x y'
     ;
-    grid-gap: 10px;
-    background-color: rgba(255, 174, 255, 0.8);
-    padding: 10px;
+    grid-gap: 50px;
+    padding: 20px;
+    justify-content: center;
+    width: fit-content;
+    align-self: center;;
+}
+
+.grid-container img:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }

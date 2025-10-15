@@ -8,51 +8,83 @@
 </head>
 <body>
     <div id="header">
-        <div id="locations" class="header-item">Number of locations checked is zero.</div>
-        <h2 class="header-item">Dara Treasure Hunt</h2>
-        <div id="score" class="header-item">Score is zero</div>
-        <div class="header-item">Click for help.</div>
-        <div id="help" class="header-item">Help report</div>
+        <div id="clicks" class="header-item">Number of clicks is zero.</div>
+        <h2 class="header-item">Find the Treasure Dara Osunkoya </h2>
+        <div id="distance" class="header-item">Distance is unknown</div>
     </div>
-    <div>Click on the locations to find silver and gold, watch out for the rattlesnake</div>
+    <div id="info">Click on the squares to find the treasure</div>
     
-    <div class="grid-container">
-  <div class="a"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="b"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="c"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="d"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="e"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="f"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="g"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="h"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="i"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="j"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="k"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="l"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="m"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="n"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="o"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="p"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="q"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="r"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="s"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="t"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="u"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="v"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="w"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="x"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="y"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="one"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="two"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="three"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="four"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="five"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="six"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="seven"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="eight"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="nine"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
-  <div class="ten"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;"></div>
+<div class="grid-container">
+    <div id="a"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(0)"></div>
+    <div id="b"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(1)"></div>
+    <div id="c"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(2)"></div>
+    <div id="d"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(3)"></div>
+    <div id="e"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(4)"></div>
+    <div id="f"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(5)"></div>
+    <div id="g"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(6)"></div>
+    <div id="h"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(7)"></div>
+    <div id="i"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(8)"></div>
+    <div id="j"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(9)"></div>
+    <div id="k"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(10)"></div>
+    <div id="l"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(11)"></div>
+    <div id="m"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(12)"></div>
+    <div id="n"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(13)"></div>
+    <div id="o"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(14)"></div>
+    <div id="p"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(15)"></div>
+    <div id="q"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(16)"></div>
+    <div id="r"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(17)"></div>
+    <div id="s"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(18)"></div>
+    <div id="t"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(19)"></div>
+    <div id="u"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(20)"></div>
+    <div id="v"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(21)"></div>
+    <div id="w"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(22)"></div>
+    <div id="x"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(23)"></div>
+    <div id="y"><img src="./assets/catcus.png" width="50px" height="50px" style="object-fit: cover;" onclick="makeGuess(24)"></div>
 </div>
+
+<script>
+    const ids = [
+    "a", "b", "c", "d", "e",
+    "f", "g", "h", "i", "j",
+    "k", "l", "m", "n", "o",
+    "p", "q", "r", "s", "t",
+    "u", "v", "w", "x", "y"
+    ];
+
+    let clickCount = 0;
+    const treasureLocation = 18;
+    let updateClick = document.getElementById("clicks");
+    const updateLocation = document.getElementById("distance");
+
+    function makeGuess(position){
+        let click = ids[position];
+        const flip = document.getElementById(click).firstElementChild;
+
+        if(position != treasureLocation){
+            flip.src = "./assets/rabbit.png";
+            clickCount ++;
+        }
+        else{
+            flip.src = "./assets/goldbar.png";
+            clickCount ++;
+        }
+
+        updateClick.innerHTML="Number of clicks is " + clickCount;
+        updateLocation.innerHTML="Distance is " + distance(position, treasureLocation);
+    }
+
+    function distance(pos1, pos2){
+        const gridSize = 5; // 5 columns per row
+        const x1 = pos1 % gridSize;
+        const y1 = Math.floor(pos1 / gridSize);
+        const x2 = pos2 % gridSize;
+        const y2 = Math.floor(pos2 / gridSize);
+
+        return Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    }
+
+</script>
+
 
 </body>
 </html>
