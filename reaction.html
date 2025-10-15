@@ -18,22 +18,43 @@
   <div id="target">Your Time</div>
   <div id="countdown">Count</div>
 
-  <button type="button" class="btn btn-primary" onclick="buttonPress2()">
+  <button type="button" class="btn btn-primary" onclick="startTime()">
     Start Time
   </button>
   <button type="button" class="btn btn-primary" onclick="recordReact()">
     React Now!
   </button>
   
-  <p id="target">I will become red </p>
-  
   <script> 
-  let myTime = undefined;
+    let myTime = undefined;
+    
 
-  function recordReact(){
-    myTime = Date.now();
-    console.log(myTime);
-  }
+    function recordReact(){
+      myTime = Date.now();
+      console.log(myTime);
+    }
+    
+    function startTime(){
+      for (let i = 0; i < 4; i++) {
+        setTimeout( function () {
+          document.getElementById('countdown').innerHTML = i
+          } , ((3-i) * 1000)
+        );
+      }
+
+      setTimeout (() => {
+        if(myTime == undefined){
+          document.getElementById('target').innerHTML = "Too Slow";
+        }
+        else{
+          let buttonTime = Date.now();
+          let elapsed = buttonTime - myTime;
+          document.getElementById('target').innerHTML = "Time was " + elapsed;
+        }
+      }, 3000)
+    } 
+
+    
   </script>
 
 </body>
