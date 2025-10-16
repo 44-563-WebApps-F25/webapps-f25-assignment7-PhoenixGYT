@@ -48,6 +48,20 @@
 		element.innerHTML = text.value;
 		element.className = "listy";
 
+		/* Limiter */
+		let listyItems = document.getElementsByClassName("listy");
+		if(listyItems.length > 9){
+			for (const element of listyItems) {
+				if(element.innerHTML === text.value){
+					console.log(element.innerHTML);
+					listyItems.element.remove();
+				}
+				else if (listyItems.length > 9){
+					listyItems[0].remove()
+				}
+			}
+		}
+
 		/* add it to the container */
 		let container = document.getElementById('target')
 		container.appendChild(element)
